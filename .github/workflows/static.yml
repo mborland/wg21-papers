@@ -1,0 +1,66 @@
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["main", "staging"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          path: sources
+      - name: Checkout staging
+        uses: actions/checkout@v6
+        with:
+          ref: staging
+          path: sources/staging
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+      - name: Stage Pages site
+        run: |
+          set -euo pipefail
+
+          mkdir -p _pages/staging
+
+          cp -a sources/generated/. _pages/
+          cp -a sources/staging/generated/. _pages/staging/
+
+          (
+            cd sources
+            find . -type f \( -name '*.html' -o -name '*.pdf' \) \
+              ! -path '*/generated/*' \
+              -exec cp --parents {} "$GITHUB_WORKSPACE/_pages/" \;
+          )
+
+          sed -E \
+            -e '1i---\ntitle: C++ Committee Papers\n---\n' \
+            -e 's#^(\[[^]]+\]: )generated/#\1#' \
+            sources/README.md > _pages/index.md
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: _pages
+          destination: _site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
