@@ -1,0 +1,6 @@
+[codespell]
+# clear: common misspellings. en-GB_to_en-US: the standard uses US spelling
+# (behavior, not behaviour).
+builtin = clear,en-GB_to_en-US
+# One word per line, lower case: correct words codespell flags anyway.
+ignore-words = .codespell-ignore

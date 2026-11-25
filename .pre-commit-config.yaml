@@ -1,0 +1,40 @@
+# Run `pre-commit install` once per clone to check every commit.
+# Run `pre-commit run --all-files` to check the whole repository.
+# The same checks run in CI (.github/workflows/pre-commit.yml).
+
+# generated/ is build output; wg21/ is the mpark/wg21 submodule.
+exclude: ^(generated|wg21)/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        # Keep two trailing spaces in Markdown: that is a hard line break.
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-yaml
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: check-added-large-files
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.3
+    hooks:
+      - id: codespell
+        # Settings and the project word list live in .codespellrc.
+
+  - repo: local
+    hooks:
+      - id: check-paper
+        name: check paper syntax
+        description: Front matter, citations, fences, divs and other pandoc pitfalls.
+        entry: tools/check_paper.py
+        language: python
+        additional_dependencies: [pyyaml]
+        # Show the "citation index not built" note even when the hook passes.
+        verbose: true
+        # Every top-level .md that wg21/flat.mk builds into a paper.
+        files: ^(?!(README|CHANGELOG|LICENSE)\.md$)[^/]+(?<!\.slides)\.md$
