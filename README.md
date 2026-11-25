@@ -17,3 +17,5 @@ This repository contains the source code for various proposals and the
 ## Historical
 
 - None
+
+[D4497R0]: generated/D4497R0.html
