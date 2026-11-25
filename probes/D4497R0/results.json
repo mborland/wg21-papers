@@ -1,0 +1,4910 @@
+{
+ "features": {
+  "MSVC STL": {
+   "add_sat_int": [
+    "rejected",
+    "C2039: 'add_sat': is not a member of 'std'"
+   ],
+   "bit_reverse": [
+    "rejected",
+    "C2039: 'bit_reverse': is not a member of 'std'"
+   ],
+   "ckd_add_int": [
+    "no-header",
+    "C1083: Cannot open include file: 'stdckdint.h': No such file or directory"
+   ],
+   "iota_diff_integral": [
+    "no",
+    ""
+   ],
+   "iota_diff_width": [
+    "yes",
+    ""
+   ],
+   "macros": {
+    "__cpp_lib_bitops": "201907L",
+    "__cpp_lib_byteswap": "202110L",
+    "__cpp_lib_constexpr_charconv": "202207L",
+    "__cpp_lib_format_uchar": "202311L",
+    "__cpp_lib_int_pow2": "202002L",
+    "__cpp_lib_integer_comparison_functions": "202002L",
+    "__cpp_lib_saturation_arithmetic": "-",
+    "__cpp_lib_simd": "-",
+    "__cpp_lib_simd_bitops": "-",
+    "__cpp_lib_stdbit_h": "-",
+    "__cpp_lib_stdckdint_h": "-",
+    "__cpp_lib_to_chars": "201611L",
+    "__cpp_lib_to_string": "-"
+   },
+   "random_char": [
+    "lib-error",
+    "C2338: static assertion failed: 'invalid template argument for uniform_int_distribution: N4950 [rand.req.genl]/1.5 requires one of short, int, long, long long, unsigned short, unsigned int, unsigned l"
+   ],
+   "random_schar": [
+    "lib-error",
+    "C2338: static assertion failed: 'invalid template argument for uniform_int_distribution: N4950 [rand.req.genl]/1.5 requires one of short, int, long, long long, unsigned short, unsigned int, unsigned l"
+   ],
+   "saturating_add_int": [
+    "rejected",
+    "C2039: 'saturating_add': is not a member of 'std'"
+   ],
+   "shl": [
+    "rejected",
+    "C2039: 'shl': is not a member of 'std'"
+   ],
+   "stdbit_uint": [
+    "no-header",
+    "C1083: Cannot open include file: 'stdbit.h': No such file or directory"
+   ]
+  },
+  "libc++": {
+   "add_sat_int": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "bit_reverse": [
+    "rejected",
+    "no member named 'bit_reverse' in namespace 'std'"
+   ],
+   "ckd_add_int": [
+    "ok",
+    ""
+   ],
+   "iota_diff_integral": [
+    "yes",
+    ""
+   ],
+   "iota_diff_width": [
+    "yes",
+    ""
+   ],
+   "macros": {
+    "__cpp_lib_bitops": "201907L",
+    "__cpp_lib_byteswap": "202110L",
+    "__cpp_lib_constexpr_charconv": "202207L",
+    "__cpp_lib_format_uchar": "202311L",
+    "__cpp_lib_int_pow2": "202002L",
+    "__cpp_lib_integer_comparison_functions": "202002L",
+    "__cpp_lib_saturation_arithmetic": "202603L",
+    "__cpp_lib_simd": "-",
+    "__cpp_lib_simd_bitops": "-",
+    "__cpp_lib_stdbit_h": "-",
+    "__cpp_lib_stdckdint_h": "-",
+    "__cpp_lib_to_chars": "-",
+    "__cpp_lib_to_string": "-"
+   },
+   "random_char": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<char>::value': IntType must be a supported integer type"
+   ],
+   "random_schar": [
+    "ok",
+    ""
+   ],
+   "saturating_add_int": [
+    "ok",
+    ""
+   ],
+   "shl": [
+    "rejected",
+    "no member named 'shl' in namespace 'std'"
+   ],
+   "stdbit_uint": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ]
+  },
+  "libstdc++/clang": {
+   "add_sat_int": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "bit_reverse": [
+    "rejected",
+    "no member named 'bit_reverse' in namespace 'std'"
+   ],
+   "ckd_add_int": [
+    "ok",
+    ""
+   ],
+   "iota_diff_integral": [
+    "yes",
+    ""
+   ],
+   "iota_diff_width": [
+    "yes",
+    ""
+   ],
+   "macros": {
+    "__cpp_lib_bitops": "201907L",
+    "__cpp_lib_byteswap": "202110L",
+    "__cpp_lib_constexpr_charconv": "202207L",
+    "__cpp_lib_format_uchar": "202311L",
+    "__cpp_lib_int_pow2": "202002L",
+    "__cpp_lib_integer_comparison_functions": "202002L",
+    "__cpp_lib_saturation_arithmetic": "202603L",
+    "__cpp_lib_simd": "-",
+    "__cpp_lib_simd_bitops": "-",
+    "__cpp_lib_stdbit_h": "202603L",
+    "__cpp_lib_stdckdint_h": "202603L",
+    "__cpp_lib_to_chars": "202306L",
+    "__cpp_lib_to_string": "202306L"
+   },
+   "random_char": [
+    "ok",
+    ""
+   ],
+   "random_schar": [
+    "ok",
+    ""
+   ],
+   "saturating_add_int": [
+    "ok",
+    ""
+   ],
+   "shl": [
+    "rejected",
+    "no member named 'shl' in namespace 'std'"
+   ],
+   "stdbit_uint": [
+    "ok",
+    ""
+   ]
+  },
+  "libstdc++/gcc": {
+   "add_sat_int": [
+    "rejected",
+    "'add_sat' is not a member of 'std'"
+   ],
+   "bit_reverse": [
+    "rejected",
+    "'bit_reverse' is not a member of 'std'"
+   ],
+   "ckd_add_int": [
+    "ok",
+    ""
+   ],
+   "iota_diff_integral": [
+    "yes",
+    ""
+   ],
+   "iota_diff_width": [
+    "yes",
+    ""
+   ],
+   "macros": {
+    "__cpp_lib_bitops": "201907L",
+    "__cpp_lib_byteswap": "202110L",
+    "__cpp_lib_constexpr_charconv": "202207L",
+    "__cpp_lib_format_uchar": "202311L",
+    "__cpp_lib_int_pow2": "202002L",
+    "__cpp_lib_integer_comparison_functions": "202002L",
+    "__cpp_lib_saturation_arithmetic": "202603L",
+    "__cpp_lib_simd": "-",
+    "__cpp_lib_simd_bitops": "-",
+    "__cpp_lib_stdbit_h": "202603L",
+    "__cpp_lib_stdckdint_h": "202603L",
+    "__cpp_lib_to_chars": "202306L",
+    "__cpp_lib_to_string": "202306L"
+   },
+   "random_char": [
+    "ok",
+    ""
+   ],
+   "random_schar": [
+    "ok",
+    ""
+   ],
+   "saturating_add_int": [
+    "ok",
+    ""
+   ],
+   "shl": [
+    "rejected",
+    "'shl' is not a member of 'std'"
+   ],
+   "stdbit_uint": [
+    "ok",
+    ""
+   ]
+  }
+ },
+ "msvc_types": {
+  "abs|s128c": [
+   "rejected",
+   "C2665: 'abs': no overloaded function could convert all the argument types"
+  ],
+  "add_sat|s128c": [
+   "rejected",
+   "C2039: 'add_sat': is not a member of 'std'"
+  ],
+  "add_sat|u128c": [
+   "rejected",
+   "C2039: 'add_sat': is not a member of 'std'"
+  ],
+  "atomic|s128c": [
+   "rejected",
+   "C2039: 'fetch_add': is not a member of 'std::atomic<T>'"
+  ],
+  "atomic|u128c": [
+   "rejected",
+   "C2039: 'fetch_add': is not a member of 'std::atomic<T>'"
+  ],
+  "bit|u128c": [
+   "rejected",
+   "C2672: 'std::popcount': no matching overloaded function found"
+  ],
+  "byteswap|s128c": [
+   "rejected",
+   "C2672: 'std::byteswap': no matching overloaded function found"
+  ],
+  "byteswap|u128c": [
+   "rejected",
+   "C2672: 'std::byteswap': no matching overloaded function found"
+  ],
+  "ckd_add|s128c": [
+   "no-header",
+   "C1083: Cannot open include file: 'stdckdint.h': No such file or directory"
+  ],
+  "ckd_add|u128c": [
+   "no-header",
+   "C1083: Cannot open include file: 'stdckdint.h': No such file or directory"
+  ],
+  "cmath|s128c": [
+   "rejected",
+   "C2665: 'sqrt': no overloaded function could convert all the argument types"
+  ],
+  "cmath|u128c": [
+   "rejected",
+   "C2665: 'sqrt': no overloaded function could convert all the argument types"
+  ],
+  "cmp_less|s128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'The integer comparison functions only accept standard and extended integer types.'"
+  ],
+  "cmp_less|u128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'The integer comparison functions only accept standard and extended integer types.'"
+  ],
+  "duration|s128c": [
+   "ok",
+   ""
+  ],
+  "duration|u128c": [
+   "ok",
+   ""
+  ],
+  "exists|b32": [
+   "rejected",
+   "example.cpp"
+  ],
+  "exists|i128": [
+   "rejected",
+   "example.cpp"
+  ],
+  "extents|s128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'make_unsigned<T> requires that T shall be a (possibly cv-qualified) integral type or enumeration but not a bool type.'"
+  ],
+  "extents|u128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'make_unsigned<T> requires that T shall be a (possibly cv-qualified) integral type or enumeration but not a bool type.'"
+  ],
+  "format|s128c": [
+   "lib-error",
+   "C2039: 'parse': is not a member of 'std::formatter<std::__p2286::_Compile_time_parse_format_specs::_FormattedType,std::__p2286::_Compile_time_parse_format_specs::_CharT>'"
+  ],
+  "format|u128c": [
+   "lib-error",
+   "C2039: 'parse': is not a member of 'std::formatter<std::__p2286::_Compile_time_parse_format_specs::_FormattedType,std::__p2286::_Compile_time_parse_format_specs::_CharT>'"
+  ],
+  "from_chars|s128c": [
+   "rejected",
+   "C2665: 'std::from_chars': no overloaded function could convert all the argument types"
+  ],
+  "from_chars|u128c": [
+   "rejected",
+   "C2665: 'std::from_chars': no overloaded function could convert all the argument types"
+  ],
+  "gcd|s128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'GCD requires nonbool integral types'"
+  ],
+  "gcd|u128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'GCD requires nonbool integral types'"
+  ],
+  "hash|s128c": [
+   "rejected",
+   "C2512: 'std::hash<T>': no appropriate default constructor available"
+  ],
+  "hash|u128c": [
+   "rejected",
+   "C2512: 'std::hash<T>': no appropriate default constructor available"
+  ],
+  "in_range|s128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'The integer comparison functions only accept standard and extended integer types.'"
+  ],
+  "in_range|u128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'The integer comparison functions only accept standard and extended integer types.'"
+  ],
+  "integral|s128c": [
+   "no",
+   ""
+  ],
+  "integral|u128c": [
+   "no",
+   ""
+  ],
+  "iota|s128c": [
+   "rejected",
+   "C3889: call to object of class type 'std::ranges::views::_Iota_fn': no matching call operator found"
+  ],
+  "iota|u128c": [
+   "rejected",
+   "C3889: call to object of class type 'std::ranges::views::_Iota_fn': no matching call operator found"
+  ],
+  "is_integral|s128c": [
+   "no",
+   ""
+  ],
+  "is_integral|u128c": [
+   "no",
+   ""
+  ],
+  "is_signed|s128c": [
+   "no",
+   ""
+  ],
+  "is_signed|u128c": [
+   "no",
+   ""
+  ],
+  "istream|s128c": [
+   "rejected",
+   "C2678: binary '>>': no operator found which takes a left-hand operand of type 'std::istringstream' (or there is no acceptable conversion)"
+  ],
+  "istream|u128c": [
+   "rejected",
+   "C2678: binary '>>': no operator found which takes a left-hand operand of type 'std::istringstream' (or there is no acceptable conversion)"
+  ],
+  "limits_digits|s128c": [
+   "yes",
+   ""
+  ],
+  "limits_digits|u128c": [
+   "yes",
+   ""
+  ],
+  "limits|s128c": [
+   "yes",
+   ""
+  ],
+  "limits|u128c": [
+   "yes",
+   ""
+  ],
+  "make_unsigned|s128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'make_unsigned<T> requires that T shall be a (possibly cv-qualified) integral type or enumeration but not a bool type.'"
+  ],
+  "make_unsigned|u128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'make_unsigned<T> requires that T shall be a (possibly cv-qualified) integral type or enumeration but not a bool type.'"
+  ],
+  "midpoint|s128c": [
+   "rejected",
+   "C2672: 'std::midpoint': no matching overloaded function found"
+  ],
+  "midpoint|u128c": [
+   "rejected",
+   "C2672: 'std::midpoint': no matching overloaded function found"
+  ],
+  "ostream|s128c": [
+   "rejected",
+   "C2678: binary '<<': no operator found which takes a left-hand operand of type 'std::ostringstream' (or there is no acceptable conversion)"
+  ],
+  "ostream|u128c": [
+   "rejected",
+   "C2678: binary '<<': no operator found which takes a left-hand operand of type 'std::ostringstream' (or there is no acceptable conversion)"
+  ],
+  "random|s128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'invalid template argument for uniform_int_distribution: N4950 [rand.req.genl]/1.5 requires one of short, int, long, long long, unsigned short, unsigned int, unsigned l"
+  ],
+  "random|u128c": [
+   "lib-error",
+   "C2338: static assertion failed: 'invalid template argument for uniform_int_distribution: N4950 [rand.req.genl]/1.5 requires one of short, int, long, long long, unsigned short, unsigned int, unsigned l"
+  ],
+  "saturating_add|s128c": [
+   "rejected",
+   "C2039: 'saturating_add': is not a member of 'std'"
+  ],
+  "saturating_add|u128c": [
+   "rejected",
+   "C2039: 'saturating_add': is not a member of 'std'"
+  ],
+  "saturating_cast|s128c": [
+   "rejected",
+   "C2039: 'saturating_cast': is not a member of 'std'"
+  ],
+  "saturating_cast|u128c": [
+   "rejected",
+   "C2039: 'saturating_cast': is not a member of 'std'"
+  ],
+  "stdbit|u128c": [
+   "no-header",
+   "C1083: Cannot open include file: 'stdbit.h': No such file or directory"
+  ],
+  "to_chars|s128c": [
+   "rejected",
+   "C2665: 'std::to_chars': no overloaded function could convert all the argument types"
+  ],
+  "to_chars|u128c": [
+   "rejected",
+   "C2665: 'std::to_chars': no overloaded function could convert all the argument types"
+  ],
+  "to_integer|s128c": [
+   "rejected",
+   "C2672: 'std::to_integer': no matching overloaded function found"
+  ],
+  "to_integer|u128c": [
+   "rejected",
+   "C2672: 'std::to_integer': no matching overloaded function found"
+  ],
+  "to_string|s128c": [
+   "rejected",
+   "C2665: 'std::to_string': no overloaded function could convert all the argument types"
+  ],
+  "to_string|u128c": [
+   "rejected",
+   "C2665: 'std::to_string': no overloaded function could convert all the argument types"
+  ]
+ },
+ "toolchains": {
+  "MSVC STL": {
+   "flags": "/std:c++latest /EHsc /Zs",
+   "version": "MSVC _MSC_FULL_VER 195136246, _MSVC_STL_UPDATE 202604L (Compiler Explorer vcpp_v19_latest_x64)"
+  },
+  "libc++": {
+   "flags": "--target=x86_64-apple-darwin -stdlib=libc++",
+   "version": "Homebrew clang version 23.1.6"
+  },
+  "libstdc++/clang": {
+   "flags": "--target=x86_64-apple-darwin -stdlib=libstdc++ -nostdinc++ -isystem /opt/homebrew/opt/gcc/include/c++/16 -isystem /opt/homebrew/opt/gcc/include/c++/16/aarch64-apple-darwin27",
+   "version": "Homebrew clang version 23.1.6"
+  },
+  "libstdc++/gcc": {
+   "flags": "",
+   "version": "g++-16 (Homebrew GCC 16.2.0) 16.2.0"
+  }
+ },
+ "types": {
+  "libc++|c++26": {
+   "abs|b128": [
+    "ok",
+    ""
+   ],
+   "abs|b256": [
+    "ok",
+    ""
+   ],
+   "abs|b32": [
+    "ok",
+    ""
+   ],
+   "abs|i128": [
+    "ok",
+    ""
+   ],
+   "add_sat|b128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|i128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|u128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "atomic|b128": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type '_BitInt(128)'"
+   ],
+   "atomic|b256": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type '_BitInt(256)'"
+   ],
+   "atomic|b32": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type '_BitInt(32)'"
+   ],
+   "atomic|i128": [
+    "ok",
+    ""
+   ],
+   "atomic|u128": [
+    "ok",
+    ""
+   ],
+   "atomic|ub128": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type 'unsigned _BitInt(128)'"
+   ],
+   "atomic|ub256": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type 'unsigned _BitInt(256)'"
+   ],
+   "atomic|ub32": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type 'unsigned _BitInt(32)'"
+   ],
+   "bit|u128": [
+    "ok",
+    ""
+   ],
+   "bit|ub128": [
+    "ok",
+    ""
+   ],
+   "bit|ub256": [
+    "ok",
+    ""
+   ],
+   "bit|ub32": [
+    "ok",
+    ""
+   ],
+   "byteswap|b128": [
+    "ok",
+    ""
+   ],
+   "byteswap|b256": [
+    "ok",
+    ""
+   ],
+   "byteswap|b32": [
+    "ok",
+    ""
+   ],
+   "byteswap|i128": [
+    "ok",
+    ""
+   ],
+   "byteswap|u128": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub128": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub256": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub32": [
+    "ok",
+    ""
+   ],
+   "ckd_add|b128": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka '_BitInt(128)') invalid)"
+   ],
+   "ckd_add|b256": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka '_BitInt(256)') invalid)"
+   ],
+   "ckd_add|b32": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka '_BitInt(32)') invalid)"
+   ],
+   "ckd_add|i128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|u128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|ub128": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka 'unsigned _BitInt(128)') invalid)"
+   ],
+   "ckd_add|ub256": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka 'unsigned _BitInt(256)') invalid)"
+   ],
+   "ckd_add|ub32": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka 'unsigned _BitInt(32)') invalid)"
+   ],
+   "cmath|b128": [
+    "ok",
+    ""
+   ],
+   "cmath|b256": [
+    "ok",
+    ""
+   ],
+   "cmath|b32": [
+    "ok",
+    ""
+   ],
+   "cmath|i128": [
+    "ok",
+    ""
+   ],
+   "cmath|u128": [
+    "ok",
+    ""
+   ],
+   "cmath|ub128": [
+    "ok",
+    ""
+   ],
+   "cmath|ub256": [
+    "ok",
+    ""
+   ],
+   "cmath|ub32": [
+    "ok",
+    ""
+   ],
+   "cmp_less|b128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|b256": [
+    "ok",
+    ""
+   ],
+   "cmp_less|b32": [
+    "ok",
+    ""
+   ],
+   "cmp_less|i128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|u128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub256": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub32": [
+    "ok",
+    ""
+   ],
+   "duration|b128": [
+    "ok",
+    ""
+   ],
+   "duration|b256": [
+    "ok",
+    ""
+   ],
+   "duration|b32": [
+    "ok",
+    ""
+   ],
+   "duration|i128": [
+    "ok",
+    ""
+   ],
+   "duration|u128": [
+    "ok",
+    ""
+   ],
+   "duration|ub128": [
+    "ok",
+    ""
+   ],
+   "duration|ub256": [
+    "ok",
+    ""
+   ],
+   "duration|ub32": [
+    "ok",
+    ""
+   ],
+   "extents|b128": [
+    "ok",
+    ""
+   ],
+   "extents|b256": [
+    "ok",
+    ""
+   ],
+   "extents|b32": [
+    "ok",
+    ""
+   ],
+   "extents|i128": [
+    "ok",
+    ""
+   ],
+   "extents|u128": [
+    "ok",
+    ""
+   ],
+   "extents|ub128": [
+    "ok",
+    ""
+   ],
+   "extents|ub256": [
+    "ok",
+    ""
+   ],
+   "extents|ub32": [
+    "ok",
+    ""
+   ],
+   "format|b128": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<_BitInt(128), char>'"
+   ],
+   "format|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'sizeof(_BitInt(256)) == 0': an unsupported signed integer was used"
+   ],
+   "format|b32": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<_BitInt(32), char>'"
+   ],
+   "format|i128": [
+    "ok",
+    ""
+   ],
+   "format|u128": [
+    "ok",
+    ""
+   ],
+   "format|ub128": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<unsigned _BitInt(128), char>'"
+   ],
+   "format|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'sizeof(unsigned _BitInt(256)) == 0': an unsupported unsigned integer was used"
+   ],
+   "format|ub32": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<unsigned _BitInt(32), char>'"
+   ],
+   "from_chars|b128": [
+    "ok",
+    ""
+   ],
+   "from_chars|b256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__itoa::__traits_base<unsigned _BitInt(256)>'"
+   ],
+   "from_chars|b32": [
+    "ok",
+    ""
+   ],
+   "from_chars|i128": [
+    "ok",
+    ""
+   ],
+   "from_chars|u128": [
+    "ok",
+    ""
+   ],
+   "from_chars|ub128": [
+    "ok",
+    ""
+   ],
+   "from_chars|ub256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__itoa::__traits_base<unsigned _BitInt(256)>'"
+   ],
+   "from_chars|ub32": [
+    "ok",
+    ""
+   ],
+   "gcd|b128": [
+    "ok",
+    ""
+   ],
+   "gcd|b256": [
+    "lib-error",
+    "__builtin_mul_overflow does not support 'signed _BitInt' operands of more than 128 bits"
+   ],
+   "gcd|b32": [
+    "ok",
+    ""
+   ],
+   "gcd|i128": [
+    "ok",
+    ""
+   ],
+   "gcd|u128": [
+    "ok",
+    ""
+   ],
+   "gcd|ub128": [
+    "ok",
+    ""
+   ],
+   "gcd|ub256": [
+    "ok",
+    ""
+   ],
+   "gcd|ub32": [
+    "ok",
+    ""
+   ],
+   "hash|b128": [
+    "ok",
+    ""
+   ],
+   "hash|b256": [
+    "ok",
+    ""
+   ],
+   "hash|b32": [
+    "ok",
+    ""
+   ],
+   "hash|i128": [
+    "ok",
+    ""
+   ],
+   "hash|u128": [
+    "ok",
+    ""
+   ],
+   "hash|ub128": [
+    "ok",
+    ""
+   ],
+   "hash|ub256": [
+    "ok",
+    ""
+   ],
+   "hash|ub32": [
+    "ok",
+    ""
+   ],
+   "in_range|b128": [
+    "ok",
+    ""
+   ],
+   "in_range|b256": [
+    "ok",
+    ""
+   ],
+   "in_range|b32": [
+    "ok",
+    ""
+   ],
+   "in_range|i128": [
+    "ok",
+    ""
+   ],
+   "in_range|u128": [
+    "ok",
+    ""
+   ],
+   "in_range|ub128": [
+    "ok",
+    ""
+   ],
+   "in_range|ub256": [
+    "ok",
+    ""
+   ],
+   "in_range|ub32": [
+    "ok",
+    ""
+   ],
+   "integral|b128": [
+    "yes",
+    ""
+   ],
+   "integral|b256": [
+    "yes",
+    ""
+   ],
+   "integral|b32": [
+    "yes",
+    ""
+   ],
+   "integral|i128": [
+    "yes",
+    ""
+   ],
+   "integral|u128": [
+    "yes",
+    ""
+   ],
+   "integral|ub128": [
+    "yes",
+    ""
+   ],
+   "integral|ub256": [
+    "yes",
+    ""
+   ],
+   "integral|ub32": [
+    "yes",
+    ""
+   ],
+   "iota|b128": [
+    "ok",
+    ""
+   ],
+   "iota|b256": [
+    "lib-error",
+    "static assertion failed: Found integer-like type that is bigger than the largest integer like type."
+   ],
+   "iota|b32": [
+    "ok",
+    ""
+   ],
+   "iota|i128": [
+    "ok",
+    ""
+   ],
+   "iota|u128": [
+    "ok",
+    ""
+   ],
+   "iota|ub128": [
+    "ok",
+    ""
+   ],
+   "iota|ub256": [
+    "lib-error",
+    "static assertion failed: Found integer-like type that is bigger than the largest integer like type."
+   ],
+   "iota|ub32": [
+    "ok",
+    ""
+   ],
+   "is_integral|b128": [
+    "yes",
+    ""
+   ],
+   "is_integral|b256": [
+    "yes",
+    ""
+   ],
+   "is_integral|b32": [
+    "yes",
+    ""
+   ],
+   "is_integral|i128": [
+    "yes",
+    ""
+   ],
+   "is_integral|u128": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub128": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub256": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub32": [
+    "yes",
+    ""
+   ],
+   "is_signed|b128": [
+    "yes",
+    ""
+   ],
+   "is_signed|b256": [
+    "yes",
+    ""
+   ],
+   "is_signed|b32": [
+    "yes",
+    ""
+   ],
+   "is_signed|i128": [
+    "yes",
+    ""
+   ],
+   "is_signed|u128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub256": [
+    "no",
+    ""
+   ],
+   "is_signed|ub32": [
+    "no",
+    ""
+   ],
+   "istream|b128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "istream|b256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "istream|b32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "istream|i128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "istream|u128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "istream|ub128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "istream|ub256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "istream|ub32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "limits_digits|b128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|b256": [
+    "yes",
+    ""
+   ],
+   "limits_digits|b32": [
+    "yes",
+    ""
+   ],
+   "limits_digits|i128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|u128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub256": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub32": [
+    "yes",
+    ""
+   ],
+   "limits|b128": [
+    "yes",
+    ""
+   ],
+   "limits|b256": [
+    "yes",
+    ""
+   ],
+   "limits|b32": [
+    "yes",
+    ""
+   ],
+   "limits|i128": [
+    "yes",
+    ""
+   ],
+   "limits|u128": [
+    "yes",
+    ""
+   ],
+   "limits|ub128": [
+    "yes",
+    ""
+   ],
+   "limits|ub256": [
+    "yes",
+    ""
+   ],
+   "limits|ub32": [
+    "yes",
+    ""
+   ],
+   "make_unsigned|b128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|b256": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|b32": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|i128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|u128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub256": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub32": [
+    "ok",
+    ""
+   ],
+   "midpoint|b128": [
+    "ok",
+    ""
+   ],
+   "midpoint|b256": [
+    "ok",
+    ""
+   ],
+   "midpoint|b32": [
+    "ok",
+    ""
+   ],
+   "midpoint|i128": [
+    "ok",
+    ""
+   ],
+   "midpoint|u128": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub128": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub256": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub32": [
+    "ok",
+    ""
+   ],
+   "ostream|b128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "ostream|b256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "ostream|b32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "ostream|i128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "ostream|u128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "ostream|ub128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "ostream|ub256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "ostream|ub32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "random|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<_BitInt(128)>::value': IntType must be a supported integer type"
+   ],
+   "random|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<_BitInt(256)>::value': IntType must be a supported integer type"
+   ],
+   "random|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<_BitInt(32)>::value': IntType must be a supported integer type"
+   ],
+   "random|i128": [
+    "ok",
+    ""
+   ],
+   "random|u128": [
+    "ok",
+    ""
+   ],
+   "random|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<unsigned _BitInt(128)>::value': IntType must be a supported integer type"
+   ],
+   "random|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<unsigned _BitInt(256)>::value': IntType must be a supported integer type"
+   ],
+   "random|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<unsigned _BitInt(32)>::value': IntType must be a supported integer type"
+   ],
+   "saturating_add|b128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|b256": [
+    "ok",
+    ""
+   ],
+   "saturating_add|b32": [
+    "ok",
+    ""
+   ],
+   "saturating_add|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub256": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub32": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|b128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|b256": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|b32": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub256": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub32": [
+    "ok",
+    ""
+   ],
+   "stdbit|u128": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "stdbit|ub128": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "stdbit|ub256": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "stdbit|ub32": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "to_chars|b128": [
+    "ok",
+    ""
+   ],
+   "to_chars|b256": [
+    "lib-error",
+    "'make_unsigned' is only compatible with non-bool integers and enum types, but was given '__conditional_t<sizeof(_BitInt(256)) <= sizeof(int32_t), int32_t, __conditional_t<sizeof(_BitInt(256)) <= sizeo"
+   ],
+   "to_chars|b32": [
+    "ok",
+    ""
+   ],
+   "to_chars|i128": [
+    "ok",
+    ""
+   ],
+   "to_chars|u128": [
+    "ok",
+    ""
+   ],
+   "to_chars|ub128": [
+    "ok",
+    ""
+   ],
+   "to_chars|ub256": [
+    "lib-error",
+    "'make_unsigned' is only compatible with non-bool integers and enum types, but was given '__conditional_t<sizeof(unsigned _BitInt(256)) <= sizeof(int32_t), int32_t, __conditional_t<sizeof(unsigned _Bit"
+   ],
+   "to_chars|ub32": [
+    "ok",
+    ""
+   ],
+   "to_integer|b128": [
+    "ok",
+    ""
+   ],
+   "to_integer|b256": [
+    "ok",
+    ""
+   ],
+   "to_integer|b32": [
+    "ok",
+    ""
+   ],
+   "to_integer|i128": [
+    "ok",
+    ""
+   ],
+   "to_integer|u128": [
+    "ok",
+    ""
+   ],
+   "to_integer|ub128": [
+    "ok",
+    ""
+   ],
+   "to_integer|ub256": [
+    "ok",
+    ""
+   ],
+   "to_integer|ub32": [
+    "ok",
+    ""
+   ],
+   "to_string|b128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|i128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|u128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ]
+  },
+  "libc++|gnu++26": {
+   "abs|b128": [
+    "ok",
+    ""
+   ],
+   "abs|b256": [
+    "ok",
+    ""
+   ],
+   "abs|b32": [
+    "ok",
+    ""
+   ],
+   "abs|i128": [
+    "ok",
+    ""
+   ],
+   "add_sat|b128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|i128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|u128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "atomic|b128": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type '_BitInt(128)'"
+   ],
+   "atomic|b256": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type '_BitInt(256)'"
+   ],
+   "atomic|b32": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type '_BitInt(32)'"
+   ],
+   "atomic|i128": [
+    "ok",
+    ""
+   ],
+   "atomic|u128": [
+    "ok",
+    ""
+   ],
+   "atomic|ub128": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type 'unsigned _BitInt(128)'"
+   ],
+   "atomic|ub256": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type 'unsigned _BitInt(256)'"
+   ],
+   "atomic|ub32": [
+    "lib-error",
+    "_Atomic cannot be applied to integer type 'unsigned _BitInt(32)'"
+   ],
+   "bit|u128": [
+    "ok",
+    ""
+   ],
+   "bit|ub128": [
+    "ok",
+    ""
+   ],
+   "bit|ub256": [
+    "ok",
+    ""
+   ],
+   "bit|ub32": [
+    "ok",
+    ""
+   ],
+   "byteswap|b128": [
+    "ok",
+    ""
+   ],
+   "byteswap|b256": [
+    "ok",
+    ""
+   ],
+   "byteswap|b32": [
+    "ok",
+    ""
+   ],
+   "byteswap|i128": [
+    "ok",
+    ""
+   ],
+   "byteswap|u128": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub128": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub256": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub32": [
+    "ok",
+    ""
+   ],
+   "ckd_add|b128": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka '_BitInt(128)') invalid)"
+   ],
+   "ckd_add|b256": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka '_BitInt(256)') invalid)"
+   ],
+   "ckd_add|b32": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka '_BitInt(32)') invalid)"
+   ],
+   "ckd_add|i128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|u128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|ub128": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka 'unsigned _BitInt(128)') invalid)"
+   ],
+   "ckd_add|ub256": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka 'unsigned _BitInt(256)') invalid)"
+   ],
+   "ckd_add|ub32": [
+    "rejected",
+    "operand argument to checked integer operation must be an integer type other than plain 'char', 'bool', bit-precise, or an enumeration ('T' (aka 'unsigned _BitInt(32)') invalid)"
+   ],
+   "cmath|b128": [
+    "ok",
+    ""
+   ],
+   "cmath|b256": [
+    "ok",
+    ""
+   ],
+   "cmath|b32": [
+    "ok",
+    ""
+   ],
+   "cmath|i128": [
+    "ok",
+    ""
+   ],
+   "cmath|u128": [
+    "ok",
+    ""
+   ],
+   "cmath|ub128": [
+    "ok",
+    ""
+   ],
+   "cmath|ub256": [
+    "ok",
+    ""
+   ],
+   "cmath|ub32": [
+    "ok",
+    ""
+   ],
+   "cmp_less|b128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|b256": [
+    "ok",
+    ""
+   ],
+   "cmp_less|b32": [
+    "ok",
+    ""
+   ],
+   "cmp_less|i128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|u128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub256": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub32": [
+    "ok",
+    ""
+   ],
+   "duration|b128": [
+    "ok",
+    ""
+   ],
+   "duration|b256": [
+    "ok",
+    ""
+   ],
+   "duration|b32": [
+    "ok",
+    ""
+   ],
+   "duration|i128": [
+    "ok",
+    ""
+   ],
+   "duration|u128": [
+    "ok",
+    ""
+   ],
+   "duration|ub128": [
+    "ok",
+    ""
+   ],
+   "duration|ub256": [
+    "ok",
+    ""
+   ],
+   "duration|ub32": [
+    "ok",
+    ""
+   ],
+   "extents|b128": [
+    "ok",
+    ""
+   ],
+   "extents|b256": [
+    "ok",
+    ""
+   ],
+   "extents|b32": [
+    "ok",
+    ""
+   ],
+   "extents|i128": [
+    "ok",
+    ""
+   ],
+   "extents|u128": [
+    "ok",
+    ""
+   ],
+   "extents|ub128": [
+    "ok",
+    ""
+   ],
+   "extents|ub256": [
+    "ok",
+    ""
+   ],
+   "extents|ub32": [
+    "ok",
+    ""
+   ],
+   "format|b128": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<_BitInt(128), char>'"
+   ],
+   "format|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'sizeof(_BitInt(256)) == 0': an unsupported signed integer was used"
+   ],
+   "format|b32": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<_BitInt(32), char>'"
+   ],
+   "format|i128": [
+    "ok",
+    ""
+   ],
+   "format|u128": [
+    "ok",
+    ""
+   ],
+   "format|ub128": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<unsigned _BitInt(128), char>'"
+   ],
+   "format|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'sizeof(unsigned _BitInt(256)) == 0': an unsupported unsigned integer was used"
+   ],
+   "format|ub32": [
+    "lib-error",
+    "call to implicitly-deleted default constructor of 'formatter<unsigned _BitInt(32), char>'"
+   ],
+   "from_chars|b128": [
+    "ok",
+    ""
+   ],
+   "from_chars|b256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__itoa::__traits_base<unsigned _BitInt(256)>'"
+   ],
+   "from_chars|b32": [
+    "ok",
+    ""
+   ],
+   "from_chars|i128": [
+    "ok",
+    ""
+   ],
+   "from_chars|u128": [
+    "ok",
+    ""
+   ],
+   "from_chars|ub128": [
+    "ok",
+    ""
+   ],
+   "from_chars|ub256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__itoa::__traits_base<unsigned _BitInt(256)>'"
+   ],
+   "from_chars|ub32": [
+    "ok",
+    ""
+   ],
+   "gcd|b128": [
+    "ok",
+    ""
+   ],
+   "gcd|b256": [
+    "lib-error",
+    "__builtin_mul_overflow does not support 'signed _BitInt' operands of more than 128 bits"
+   ],
+   "gcd|b32": [
+    "ok",
+    ""
+   ],
+   "gcd|i128": [
+    "ok",
+    ""
+   ],
+   "gcd|u128": [
+    "ok",
+    ""
+   ],
+   "gcd|ub128": [
+    "ok",
+    ""
+   ],
+   "gcd|ub256": [
+    "ok",
+    ""
+   ],
+   "gcd|ub32": [
+    "ok",
+    ""
+   ],
+   "hash|b128": [
+    "ok",
+    ""
+   ],
+   "hash|b256": [
+    "ok",
+    ""
+   ],
+   "hash|b32": [
+    "ok",
+    ""
+   ],
+   "hash|i128": [
+    "ok",
+    ""
+   ],
+   "hash|u128": [
+    "ok",
+    ""
+   ],
+   "hash|ub128": [
+    "ok",
+    ""
+   ],
+   "hash|ub256": [
+    "ok",
+    ""
+   ],
+   "hash|ub32": [
+    "ok",
+    ""
+   ],
+   "in_range|b128": [
+    "ok",
+    ""
+   ],
+   "in_range|b256": [
+    "ok",
+    ""
+   ],
+   "in_range|b32": [
+    "ok",
+    ""
+   ],
+   "in_range|i128": [
+    "ok",
+    ""
+   ],
+   "in_range|u128": [
+    "ok",
+    ""
+   ],
+   "in_range|ub128": [
+    "ok",
+    ""
+   ],
+   "in_range|ub256": [
+    "ok",
+    ""
+   ],
+   "in_range|ub32": [
+    "ok",
+    ""
+   ],
+   "integral|b128": [
+    "yes",
+    ""
+   ],
+   "integral|b256": [
+    "yes",
+    ""
+   ],
+   "integral|b32": [
+    "yes",
+    ""
+   ],
+   "integral|i128": [
+    "yes",
+    ""
+   ],
+   "integral|u128": [
+    "yes",
+    ""
+   ],
+   "integral|ub128": [
+    "yes",
+    ""
+   ],
+   "integral|ub256": [
+    "yes",
+    ""
+   ],
+   "integral|ub32": [
+    "yes",
+    ""
+   ],
+   "iota|b128": [
+    "ok",
+    ""
+   ],
+   "iota|b256": [
+    "lib-error",
+    "static assertion failed: Found integer-like type that is bigger than the largest integer like type."
+   ],
+   "iota|b32": [
+    "ok",
+    ""
+   ],
+   "iota|i128": [
+    "ok",
+    ""
+   ],
+   "iota|u128": [
+    "ok",
+    ""
+   ],
+   "iota|ub128": [
+    "ok",
+    ""
+   ],
+   "iota|ub256": [
+    "lib-error",
+    "static assertion failed: Found integer-like type that is bigger than the largest integer like type."
+   ],
+   "iota|ub32": [
+    "ok",
+    ""
+   ],
+   "is_integral|b128": [
+    "yes",
+    ""
+   ],
+   "is_integral|b256": [
+    "yes",
+    ""
+   ],
+   "is_integral|b32": [
+    "yes",
+    ""
+   ],
+   "is_integral|i128": [
+    "yes",
+    ""
+   ],
+   "is_integral|u128": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub128": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub256": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub32": [
+    "yes",
+    ""
+   ],
+   "is_signed|b128": [
+    "yes",
+    ""
+   ],
+   "is_signed|b256": [
+    "yes",
+    ""
+   ],
+   "is_signed|b32": [
+    "yes",
+    ""
+   ],
+   "is_signed|i128": [
+    "yes",
+    ""
+   ],
+   "is_signed|u128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub256": [
+    "no",
+    ""
+   ],
+   "is_signed|ub32": [
+    "no",
+    ""
+   ],
+   "istream|b128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "istream|b256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "istream|b32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "istream|i128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "istream|u128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "istream|ub128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "istream|ub256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "istream|ub32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "limits_digits|b128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|b256": [
+    "yes",
+    ""
+   ],
+   "limits_digits|b32": [
+    "yes",
+    ""
+   ],
+   "limits_digits|i128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|u128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub256": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub32": [
+    "yes",
+    ""
+   ],
+   "limits|b128": [
+    "yes",
+    ""
+   ],
+   "limits|b256": [
+    "yes",
+    ""
+   ],
+   "limits|b32": [
+    "yes",
+    ""
+   ],
+   "limits|i128": [
+    "yes",
+    ""
+   ],
+   "limits|u128": [
+    "yes",
+    ""
+   ],
+   "limits|ub128": [
+    "yes",
+    ""
+   ],
+   "limits|ub256": [
+    "yes",
+    ""
+   ],
+   "limits|ub32": [
+    "yes",
+    ""
+   ],
+   "make_unsigned|b128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|b256": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|b32": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|i128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|u128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub256": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub32": [
+    "ok",
+    ""
+   ],
+   "midpoint|b128": [
+    "ok",
+    ""
+   ],
+   "midpoint|b256": [
+    "ok",
+    ""
+   ],
+   "midpoint|b32": [
+    "ok",
+    ""
+   ],
+   "midpoint|i128": [
+    "ok",
+    ""
+   ],
+   "midpoint|u128": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub128": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub256": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub32": [
+    "ok",
+    ""
+   ],
+   "ostream|b128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "ostream|b256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "ostream|b32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "ostream|i128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "ostream|u128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "ostream|ub128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "ostream|ub256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "ostream|ub32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "random|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<_BitInt(128)>::value': IntType must be a supported integer type"
+   ],
+   "random|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<_BitInt(256)>::value': IntType must be a supported integer type"
+   ],
+   "random|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<_BitInt(32)>::value': IntType must be a supported integer type"
+   ],
+   "random|i128": [
+    "ok",
+    ""
+   ],
+   "random|u128": [
+    "ok",
+    ""
+   ],
+   "random|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<unsigned _BitInt(128)>::value': IntType must be a supported integer type"
+   ],
+   "random|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<unsigned _BitInt(256)>::value': IntType must be a supported integer type"
+   ],
+   "random|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::__libcpp_random_is_valid_inttype<unsigned _BitInt(32)>::value': IntType must be a supported integer type"
+   ],
+   "saturating_add|b128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|b256": [
+    "ok",
+    ""
+   ],
+   "saturating_add|b32": [
+    "ok",
+    ""
+   ],
+   "saturating_add|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub256": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub32": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|b128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|b256": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|b32": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub256": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub32": [
+    "ok",
+    ""
+   ],
+   "stdbit|u128": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "stdbit|ub128": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "stdbit|ub256": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "stdbit|ub32": [
+    "no-header",
+    "'stdbit.h' file not found"
+   ],
+   "to_chars|b128": [
+    "ok",
+    ""
+   ],
+   "to_chars|b256": [
+    "lib-error",
+    "'make_unsigned' is only compatible with non-bool integers and enum types, but was given '__conditional_t<sizeof(_BitInt(256)) <= sizeof(int32_t), int32_t, __conditional_t<sizeof(_BitInt(256)) <= sizeo"
+   ],
+   "to_chars|b32": [
+    "ok",
+    ""
+   ],
+   "to_chars|i128": [
+    "ok",
+    ""
+   ],
+   "to_chars|u128": [
+    "ok",
+    ""
+   ],
+   "to_chars|ub128": [
+    "ok",
+    ""
+   ],
+   "to_chars|ub256": [
+    "lib-error",
+    "'make_unsigned' is only compatible with non-bool integers and enum types, but was given '__conditional_t<sizeof(unsigned _BitInt(256)) <= sizeof(int32_t), int32_t, __conditional_t<sizeof(unsigned _Bit"
+   ],
+   "to_chars|ub32": [
+    "ok",
+    ""
+   ],
+   "to_integer|b128": [
+    "ok",
+    ""
+   ],
+   "to_integer|b256": [
+    "ok",
+    ""
+   ],
+   "to_integer|b32": [
+    "ok",
+    ""
+   ],
+   "to_integer|i128": [
+    "ok",
+    ""
+   ],
+   "to_integer|u128": [
+    "ok",
+    ""
+   ],
+   "to_integer|ub128": [
+    "ok",
+    ""
+   ],
+   "to_integer|ub256": [
+    "ok",
+    ""
+   ],
+   "to_integer|ub32": [
+    "ok",
+    ""
+   ],
+   "to_string|b128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|i128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|u128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ]
+  },
+  "libstdc++/clang|c++26": {
+   "abs|b128": [
+    "rejected",
+    "call to 'abs' is ambiguous"
+   ],
+   "abs|b256": [
+    "rejected",
+    "call to 'abs' is ambiguous"
+   ],
+   "abs|b32": [
+    "rejected",
+    "call to 'abs' is ambiguous"
+   ],
+   "abs|i128": [
+    "ok",
+    ""
+   ],
+   "add_sat|b128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|i128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|u128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "atomic|b128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<_BitInt(128)>'"
+   ],
+   "atomic|b256": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<_BitInt(256)>'"
+   ],
+   "atomic|b32": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<_BitInt(32)>'"
+   ],
+   "atomic|i128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<__int128>'"
+   ],
+   "atomic|u128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned __int128>'"
+   ],
+   "atomic|ub128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned _BitInt(128)>'"
+   ],
+   "atomic|ub256": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned _BitInt(256)>'"
+   ],
+   "atomic|ub32": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned _BitInt(32)>'"
+   ],
+   "bit|u128": [
+    "ok",
+    ""
+   ],
+   "bit|ub128": [
+    "rejected",
+    "no matching function for call to 'popcount'"
+   ],
+   "bit|ub256": [
+    "rejected",
+    "no matching function for call to 'popcount'"
+   ],
+   "bit|ub32": [
+    "rejected",
+    "no matching function for call to 'popcount'"
+   ],
+   "byteswap|b128": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|b256": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|b32": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|i128": [
+    "ok",
+    ""
+   ],
+   "byteswap|u128": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub128": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|ub256": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|ub32": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "ckd_add|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|i128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|u128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmath|b128": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|b256": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|b32": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|i128": [
+    "ok",
+    ""
+   ],
+   "cmath|u128": [
+    "ok",
+    ""
+   ],
+   "cmath|ub128": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|ub256": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|ub32": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmp_less|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|i128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|u128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "duration|b128": [
+    "ok",
+    ""
+   ],
+   "duration|b256": [
+    "ok",
+    ""
+   ],
+   "duration|b32": [
+    "ok",
+    ""
+   ],
+   "duration|i128": [
+    "ok",
+    ""
+   ],
+   "duration|u128": [
+    "ok",
+    ""
+   ],
+   "duration|ub128": [
+    "ok",
+    ""
+   ],
+   "duration|ub256": [
+    "ok",
+    ""
+   ],
+   "duration|ub32": [
+    "ok",
+    ""
+   ],
+   "extents|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|i128": [
+    "ok",
+    ""
+   ],
+   "extents|u128": [
+    "ok",
+    ""
+   ],
+   "extents|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "format|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<_BitInt(128), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<_BitInt(256), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<_BitInt(32), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|i128": [
+    "ok",
+    ""
+   ],
+   "format|u128": [
+    "ok",
+    ""
+   ],
+   "format|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<unsigned _BitInt(128), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<unsigned _BitInt(256), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<unsigned _BitInt(32), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "from_chars|b128": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|b256": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|b32": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|i128": [
+    "ok",
+    ""
+   ],
+   "from_chars|u128": [
+    "ok",
+    ""
+   ],
+   "from_chars|ub128": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|ub256": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|ub32": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "gcd|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<_BitInt(128)>': std::gcd arguments must be integers"
+   ],
+   "gcd|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<_BitInt(256)>': std::gcd arguments must be integers"
+   ],
+   "gcd|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<_BitInt(32)>': std::gcd arguments must be integers"
+   ],
+   "gcd|i128": [
+    "ok",
+    ""
+   ],
+   "gcd|u128": [
+    "ok",
+    ""
+   ],
+   "gcd|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<unsigned _BitInt(128)>': std::gcd arguments must be integers"
+   ],
+   "gcd|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<unsigned _BitInt(256)>': std::gcd arguments must be integers"
+   ],
+   "gcd|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<unsigned _BitInt(32)>': std::gcd arguments must be integers"
+   ],
+   "hash|b128": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|b256": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|b32": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|i128": [
+    "ok",
+    ""
+   ],
+   "hash|u128": [
+    "ok",
+    ""
+   ],
+   "hash|ub128": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|ub256": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|ub32": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "in_range|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|i128": [
+    "ok",
+    ""
+   ],
+   "in_range|u128": [
+    "ok",
+    ""
+   ],
+   "in_range|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "integral|b128": [
+    "no",
+    ""
+   ],
+   "integral|b256": [
+    "no",
+    ""
+   ],
+   "integral|b32": [
+    "no",
+    ""
+   ],
+   "integral|i128": [
+    "yes",
+    ""
+   ],
+   "integral|u128": [
+    "yes",
+    ""
+   ],
+   "integral|ub128": [
+    "no",
+    ""
+   ],
+   "integral|ub256": [
+    "no",
+    ""
+   ],
+   "integral|ub32": [
+    "no",
+    ""
+   ],
+   "iota|b128": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|b256": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|b32": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|i128": [
+    "ok",
+    ""
+   ],
+   "iota|u128": [
+    "ok",
+    ""
+   ],
+   "iota|ub128": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|ub256": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|ub32": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "is_integral|b128": [
+    "no",
+    ""
+   ],
+   "is_integral|b256": [
+    "no",
+    ""
+   ],
+   "is_integral|b32": [
+    "no",
+    ""
+   ],
+   "is_integral|i128": [
+    "yes",
+    ""
+   ],
+   "is_integral|u128": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub128": [
+    "no",
+    ""
+   ],
+   "is_integral|ub256": [
+    "no",
+    ""
+   ],
+   "is_integral|ub32": [
+    "no",
+    ""
+   ],
+   "is_signed|b128": [
+    "no",
+    ""
+   ],
+   "is_signed|b256": [
+    "no",
+    ""
+   ],
+   "is_signed|b32": [
+    "no",
+    ""
+   ],
+   "is_signed|i128": [
+    "yes",
+    ""
+   ],
+   "is_signed|u128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub256": [
+    "no",
+    ""
+   ],
+   "is_signed|ub32": [
+    "no",
+    ""
+   ],
+   "istream|b128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "istream|b256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "istream|b32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "istream|i128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "istream|u128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "istream|ub128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "istream|ub256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "istream|ub32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "limits_digits|b128": [
+    "no",
+    ""
+   ],
+   "limits_digits|b256": [
+    "no",
+    ""
+   ],
+   "limits_digits|b32": [
+    "no",
+    ""
+   ],
+   "limits_digits|i128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|u128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub128": [
+    "no",
+    ""
+   ],
+   "limits_digits|ub256": [
+    "no",
+    ""
+   ],
+   "limits_digits|ub32": [
+    "no",
+    ""
+   ],
+   "limits|b128": [
+    "no",
+    ""
+   ],
+   "limits|b256": [
+    "no",
+    ""
+   ],
+   "limits|b32": [
+    "no",
+    ""
+   ],
+   "limits|i128": [
+    "yes",
+    ""
+   ],
+   "limits|u128": [
+    "yes",
+    ""
+   ],
+   "limits|ub128": [
+    "no",
+    ""
+   ],
+   "limits|ub256": [
+    "no",
+    ""
+   ],
+   "limits|ub32": [
+    "no",
+    ""
+   ],
+   "make_unsigned|b128": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<_BitInt(128)>'"
+   ],
+   "make_unsigned|b256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<_BitInt(256)>'"
+   ],
+   "make_unsigned|b32": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<_BitInt(32)>'"
+   ],
+   "make_unsigned|i128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|u128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub128": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<unsigned _BitInt(128)>'"
+   ],
+   "make_unsigned|ub256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<unsigned _BitInt(256)>'"
+   ],
+   "make_unsigned|ub32": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<unsigned _BitInt(32)>'"
+   ],
+   "midpoint|b128": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|b256": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|b32": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|i128": [
+    "ok",
+    ""
+   ],
+   "midpoint|u128": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub128": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|ub256": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|ub32": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "ostream|b128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "ostream|b256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "ostream|b32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "ostream|i128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "ostream|u128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "ostream|ub128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "ostream|ub256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "ostream|ub32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "random|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<_BitInt(128)>::value': template argument must be an integral type"
+   ],
+   "random|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<_BitInt(256)>::value': template argument must be an integral type"
+   ],
+   "random|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<_BitInt(32)>::value': template argument must be an integral type"
+   ],
+   "random|i128": [
+    "ok",
+    ""
+   ],
+   "random|u128": [
+    "ok",
+    ""
+   ],
+   "random|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<unsigned _BitInt(128)>::value': template argument must be an integral type"
+   ],
+   "random|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<unsigned _BitInt(256)>::value': template argument must be an integral type"
+   ],
+   "random|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<unsigned _BitInt(32)>::value': template argument must be an integral type"
+   ],
+   "saturating_add|b128": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|b256": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|b32": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub128": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|ub256": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|ub32": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_cast|b128": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|b256": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|b32": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub128": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|ub256": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|ub32": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "stdbit|u128": [
+    "ok",
+    ""
+   ],
+   "stdbit|ub128": [
+    "lib-error",
+    "static assertion failed"
+   ],
+   "stdbit|ub256": [
+    "lib-error",
+    "static assertion failed"
+   ],
+   "stdbit|ub32": [
+    "lib-error",
+    "static assertion failed"
+   ],
+   "to_chars|b128": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|b256": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|b32": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|i128": [
+    "ok",
+    ""
+   ],
+   "to_chars|u128": [
+    "ok",
+    ""
+   ],
+   "to_chars|ub128": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|ub256": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|ub32": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_integer|b128": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|b256": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|b32": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|i128": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|u128": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|ub128": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|ub256": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|ub32": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_string|b128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|i128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|u128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ]
+  },
+  "libstdc++/clang|gnu++26": {
+   "abs|b128": [
+    "rejected",
+    "call to 'abs' is ambiguous"
+   ],
+   "abs|b256": [
+    "rejected",
+    "call to 'abs' is ambiguous"
+   ],
+   "abs|b32": [
+    "rejected",
+    "call to 'abs' is ambiguous"
+   ],
+   "abs|i128": [
+    "ok",
+    ""
+   ],
+   "add_sat|b128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|b32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|i128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|u128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub128": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub256": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "add_sat|ub32": [
+    "rejected",
+    "no member named 'add_sat' in namespace 'std'"
+   ],
+   "atomic|b128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<_BitInt(128)>'"
+   ],
+   "atomic|b256": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<_BitInt(256)>'"
+   ],
+   "atomic|b32": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<_BitInt(32)>'"
+   ],
+   "atomic|i128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<__int128>'"
+   ],
+   "atomic|u128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned __int128>'"
+   ],
+   "atomic|ub128": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned _BitInt(128)>'"
+   ],
+   "atomic|ub256": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned _BitInt(256)>'"
+   ],
+   "atomic|ub32": [
+    "rejected",
+    "no member named 'fetch_add' in 'std::atomic<unsigned _BitInt(32)>'"
+   ],
+   "bit|u128": [
+    "ok",
+    ""
+   ],
+   "bit|ub128": [
+    "rejected",
+    "no matching function for call to 'popcount'"
+   ],
+   "bit|ub256": [
+    "rejected",
+    "no matching function for call to 'popcount'"
+   ],
+   "bit|ub32": [
+    "rejected",
+    "no matching function for call to 'popcount'"
+   ],
+   "byteswap|b128": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|b256": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|b32": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|i128": [
+    "ok",
+    ""
+   ],
+   "byteswap|u128": [
+    "ok",
+    ""
+   ],
+   "byteswap|ub128": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|ub256": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "byteswap|ub32": [
+    "rejected",
+    "no matching function for call to 'byteswap'"
+   ],
+   "ckd_add|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|i128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|u128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "ckd_add|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmath|b128": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|b256": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|b32": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|i128": [
+    "ok",
+    ""
+   ],
+   "cmath|u128": [
+    "ok",
+    ""
+   ],
+   "cmath|ub128": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|ub256": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmath|ub32": [
+    "rejected",
+    "call to 'sqrt' is ambiguous"
+   ],
+   "cmp_less|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|i128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|u128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "cmp_less|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "duration|b128": [
+    "ok",
+    ""
+   ],
+   "duration|b256": [
+    "ok",
+    ""
+   ],
+   "duration|b32": [
+    "ok",
+    ""
+   ],
+   "duration|i128": [
+    "ok",
+    ""
+   ],
+   "duration|u128": [
+    "ok",
+    ""
+   ],
+   "duration|ub128": [
+    "ok",
+    ""
+   ],
+   "duration|ub256": [
+    "ok",
+    ""
+   ],
+   "duration|ub32": [
+    "ok",
+    ""
+   ],
+   "extents|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|i128": [
+    "ok",
+    ""
+   ],
+   "extents|u128": [
+    "ok",
+    ""
+   ],
+   "extents|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "extents|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value': IndexType must be a signed or unsigned integer type"
+   ],
+   "format|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<_BitInt(128), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<_BitInt(256), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<_BitInt(32), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|i128": [
+    "ok",
+    ""
+   ],
+   "format|u128": [
+    "ok",
+    ""
+   ],
+   "format|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<unsigned _BitInt(128), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<unsigned _BitInt(256), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "format|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_default_constructible_v<std::formatter<unsigned _BitInt(32), char>>': std::formatter must be specialized for each type being formatted"
+   ],
+   "from_chars|b128": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|b256": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|b32": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|i128": [
+    "ok",
+    ""
+   ],
+   "from_chars|u128": [
+    "ok",
+    ""
+   ],
+   "from_chars|ub128": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|ub256": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "from_chars|ub32": [
+    "rejected",
+    "no matching function for call to 'from_chars'"
+   ],
+   "gcd|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<_BitInt(128)>': std::gcd arguments must be integers"
+   ],
+   "gcd|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<_BitInt(256)>': std::gcd arguments must be integers"
+   ],
+   "gcd|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<_BitInt(32)>': std::gcd arguments must be integers"
+   ],
+   "gcd|i128": [
+    "ok",
+    ""
+   ],
+   "gcd|u128": [
+    "ok",
+    ""
+   ],
+   "gcd|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<unsigned _BitInt(128)>': std::gcd arguments must be integers"
+   ],
+   "gcd|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<unsigned _BitInt(256)>': std::gcd arguments must be integers"
+   ],
+   "gcd|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'is_integral_v<unsigned _BitInt(32)>': std::gcd arguments must be integers"
+   ],
+   "hash|b128": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|b256": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|b32": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|i128": [
+    "ok",
+    ""
+   ],
+   "hash|u128": [
+    "ok",
+    ""
+   ],
+   "hash|ub128": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|ub256": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "hash|ub32": [
+    "rejected",
+    "attempt to use a deleted function"
+   ],
+   "in_range|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|i128": [
+    "ok",
+    ""
+   ],
+   "in_range|u128": [
+    "ok",
+    ""
+   ],
+   "in_range|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "in_range|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::integral_constant<bool, false>::value'"
+   ],
+   "integral|b128": [
+    "no",
+    ""
+   ],
+   "integral|b256": [
+    "no",
+    ""
+   ],
+   "integral|b32": [
+    "no",
+    ""
+   ],
+   "integral|i128": [
+    "yes",
+    ""
+   ],
+   "integral|u128": [
+    "yes",
+    ""
+   ],
+   "integral|ub128": [
+    "no",
+    ""
+   ],
+   "integral|ub256": [
+    "no",
+    ""
+   ],
+   "integral|ub32": [
+    "no",
+    ""
+   ],
+   "iota|b128": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|b256": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|b32": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|i128": [
+    "ok",
+    ""
+   ],
+   "iota|u128": [
+    "ok",
+    ""
+   ],
+   "iota|ub128": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|ub256": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "iota|ub32": [
+    "rejected",
+    "no matching function for call to object of type 'const _Iota'"
+   ],
+   "is_integral|b128": [
+    "no",
+    ""
+   ],
+   "is_integral|b256": [
+    "no",
+    ""
+   ],
+   "is_integral|b32": [
+    "no",
+    ""
+   ],
+   "is_integral|i128": [
+    "yes",
+    ""
+   ],
+   "is_integral|u128": [
+    "yes",
+    ""
+   ],
+   "is_integral|ub128": [
+    "no",
+    ""
+   ],
+   "is_integral|ub256": [
+    "no",
+    ""
+   ],
+   "is_integral|ub32": [
+    "no",
+    ""
+   ],
+   "is_signed|b128": [
+    "no",
+    ""
+   ],
+   "is_signed|b256": [
+    "no",
+    ""
+   ],
+   "is_signed|b32": [
+    "no",
+    ""
+   ],
+   "is_signed|i128": [
+    "yes",
+    ""
+   ],
+   "is_signed|u128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub128": [
+    "no",
+    ""
+   ],
+   "is_signed|ub256": [
+    "no",
+    ""
+   ],
+   "is_signed|ub32": [
+    "no",
+    ""
+   ],
+   "istream|b128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "istream|b256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "istream|b32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "istream|i128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "istream|u128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "istream|ub128": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "istream|ub256": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "istream|ub32": [
+    "rejected",
+    "invalid operands to binary expression ('std::istringstream' (aka 'basic_istringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "limits_digits|b128": [
+    "no",
+    ""
+   ],
+   "limits_digits|b256": [
+    "no",
+    ""
+   ],
+   "limits_digits|b32": [
+    "no",
+    ""
+   ],
+   "limits_digits|i128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|u128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|ub128": [
+    "no",
+    ""
+   ],
+   "limits_digits|ub256": [
+    "no",
+    ""
+   ],
+   "limits_digits|ub32": [
+    "no",
+    ""
+   ],
+   "limits|b128": [
+    "no",
+    ""
+   ],
+   "limits|b256": [
+    "no",
+    ""
+   ],
+   "limits|b32": [
+    "no",
+    ""
+   ],
+   "limits|i128": [
+    "yes",
+    ""
+   ],
+   "limits|u128": [
+    "yes",
+    ""
+   ],
+   "limits|ub128": [
+    "no",
+    ""
+   ],
+   "limits|ub256": [
+    "no",
+    ""
+   ],
+   "limits|ub32": [
+    "no",
+    ""
+   ],
+   "make_unsigned|b128": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<_BitInt(128)>'"
+   ],
+   "make_unsigned|b256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<_BitInt(256)>'"
+   ],
+   "make_unsigned|b32": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<_BitInt(32)>'"
+   ],
+   "make_unsigned|i128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|u128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|ub128": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<unsigned _BitInt(128)>'"
+   ],
+   "make_unsigned|ub256": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<unsigned _BitInt(256)>'"
+   ],
+   "make_unsigned|ub32": [
+    "lib-error",
+    "implicit instantiation of undefined template 'std::__make_unsigned_selector<unsigned _BitInt(32)>'"
+   ],
+   "midpoint|b128": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|b256": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|b32": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|i128": [
+    "ok",
+    ""
+   ],
+   "midpoint|u128": [
+    "ok",
+    ""
+   ],
+   "midpoint|ub128": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|ub256": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "midpoint|ub32": [
+    "rejected",
+    "no matching function for call to 'midpoint'"
+   ],
+   "ostream|b128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(128)'))"
+   ],
+   "ostream|b256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(256)'))"
+   ],
+   "ostream|b32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '_BitInt(32)'))"
+   ],
+   "ostream|i128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka '__int128'))"
+   ],
+   "ostream|u128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned __int128'))"
+   ],
+   "ostream|ub128": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(128)'))"
+   ],
+   "ostream|ub256": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(256)'))"
+   ],
+   "ostream|ub32": [
+    "rejected",
+    "use of overloaded operator '<<' is ambiguous (with operand types 'std::ostringstream' (aka 'basic_ostringstream<char>') and 'T' (aka 'unsigned _BitInt(32)'))"
+   ],
+   "random|b128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<_BitInt(128)>::value': template argument must be an integral type"
+   ],
+   "random|b256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<_BitInt(256)>::value': template argument must be an integral type"
+   ],
+   "random|b32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<_BitInt(32)>::value': template argument must be an integral type"
+   ],
+   "random|i128": [
+    "ok",
+    ""
+   ],
+   "random|u128": [
+    "ok",
+    ""
+   ],
+   "random|ub128": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<unsigned _BitInt(128)>::value': template argument must be an integral type"
+   ],
+   "random|ub256": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<unsigned _BitInt(256)>::value': template argument must be an integral type"
+   ],
+   "random|ub32": [
+    "lib-error",
+    "static assertion failed due to requirement 'std::is_integral<unsigned _BitInt(32)>::value': template argument must be an integral type"
+   ],
+   "saturating_add|b128": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|b256": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|b32": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|ub128": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|ub256": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_add|ub32": [
+    "rejected",
+    "no matching function for call to 'saturating_add'"
+   ],
+   "saturating_cast|b128": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|b256": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|b32": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|ub128": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|ub256": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "saturating_cast|ub32": [
+    "rejected",
+    "no matching function for call to 'saturating_cast'"
+   ],
+   "stdbit|u128": [
+    "ok",
+    ""
+   ],
+   "stdbit|ub128": [
+    "lib-error",
+    "static assertion failed"
+   ],
+   "stdbit|ub256": [
+    "lib-error",
+    "static assertion failed"
+   ],
+   "stdbit|ub32": [
+    "lib-error",
+    "static assertion failed"
+   ],
+   "to_chars|b128": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|b256": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|b32": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|i128": [
+    "ok",
+    ""
+   ],
+   "to_chars|u128": [
+    "ok",
+    ""
+   ],
+   "to_chars|ub128": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|ub256": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_chars|ub32": [
+    "rejected",
+    "call to 'to_chars' is ambiguous"
+   ],
+   "to_integer|b128": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|b256": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|b32": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|i128": [
+    "ok",
+    ""
+   ],
+   "to_integer|u128": [
+    "ok",
+    ""
+   ],
+   "to_integer|ub128": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|ub256": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_integer|ub32": [
+    "rejected",
+    "no matching function for call to 'to_integer'"
+   ],
+   "to_string|b128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|b32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|i128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|u128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub128": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub256": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ],
+   "to_string|ub32": [
+    "rejected",
+    "call to 'to_string' is ambiguous"
+   ]
+  },
+  "libstdc++/gcc|c++26": {
+   "abs|i128": [
+    "ok",
+    ""
+   ],
+   "add_sat|i128": [
+    "rejected",
+    "'add_sat' is not a member of 'std'"
+   ],
+   "add_sat|u128": [
+    "rejected",
+    "'add_sat' is not a member of 'std'"
+   ],
+   "atomic|i128": [
+    "rejected",
+    "'struct std::atomic<__int128>' has no member named 'fetch_add'"
+   ],
+   "atomic|u128": [
+    "rejected",
+    "'struct std::atomic<__int128 unsigned>' has no member named 'fetch_add'"
+   ],
+   "bit|u128": [
+    "ok",
+    ""
+   ],
+   "byteswap|i128": [
+    "ok",
+    ""
+   ],
+   "byteswap|u128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|i128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|u128": [
+    "ok",
+    ""
+   ],
+   "cmath|i128": [
+    "ok",
+    ""
+   ],
+   "cmath|u128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|i128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|u128": [
+    "ok",
+    ""
+   ],
+   "duration|i128": [
+    "ok",
+    ""
+   ],
+   "duration|u128": [
+    "ok",
+    ""
+   ],
+   "extents|i128": [
+    "ok",
+    ""
+   ],
+   "extents|u128": [
+    "ok",
+    ""
+   ],
+   "format|i128": [
+    "ok",
+    ""
+   ],
+   "format|u128": [
+    "ok",
+    ""
+   ],
+   "from_chars|i128": [
+    "ok",
+    ""
+   ],
+   "from_chars|u128": [
+    "ok",
+    ""
+   ],
+   "gcd|i128": [
+    "ok",
+    ""
+   ],
+   "gcd|u128": [
+    "ok",
+    ""
+   ],
+   "hash|i128": [
+    "ok",
+    ""
+   ],
+   "hash|u128": [
+    "ok",
+    ""
+   ],
+   "in_range|i128": [
+    "ok",
+    ""
+   ],
+   "in_range|u128": [
+    "ok",
+    ""
+   ],
+   "integral|i128": [
+    "yes",
+    ""
+   ],
+   "integral|u128": [
+    "yes",
+    ""
+   ],
+   "iota|i128": [
+    "ok",
+    ""
+   ],
+   "iota|u128": [
+    "ok",
+    ""
+   ],
+   "is_integral|i128": [
+    "yes",
+    ""
+   ],
+   "is_integral|u128": [
+    "yes",
+    ""
+   ],
+   "is_signed|i128": [
+    "yes",
+    ""
+   ],
+   "is_signed|u128": [
+    "no",
+    ""
+   ],
+   "istream|i128": [
+    "rejected",
+    "no match for 'operator>>' (operand types are 'std::istringstream' {aka 'std::__cxx11::basic_istringstream<char>'} and 'T' {aka '__int128'})"
+   ],
+   "istream|u128": [
+    "rejected",
+    "no match for 'operator>>' (operand types are 'std::istringstream' {aka 'std::__cxx11::basic_istringstream<char>'} and 'T' {aka '__int128 unsigned'})"
+   ],
+   "limits_digits|i128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|u128": [
+    "yes",
+    ""
+   ],
+   "limits|i128": [
+    "yes",
+    ""
+   ],
+   "limits|u128": [
+    "yes",
+    ""
+   ],
+   "make_unsigned|i128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|u128": [
+    "ok",
+    ""
+   ],
+   "midpoint|i128": [
+    "ok",
+    ""
+   ],
+   "midpoint|u128": [
+    "ok",
+    ""
+   ],
+   "ostream|i128": [
+    "rejected",
+    "ambiguous overload for 'operator<<' (operand types are 'std::ostringstream' {aka 'std::__cxx11::basic_ostringstream<char>'} and 'T' {aka '__int128'})"
+   ],
+   "ostream|u128": [
+    "rejected",
+    "ambiguous overload for 'operator<<' (operand types are 'std::ostringstream' {aka 'std::__cxx11::basic_ostringstream<char>'} and 'T' {aka '__int128 unsigned'})"
+   ],
+   "random|i128": [
+    "ok",
+    ""
+   ],
+   "random|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|u128": [
+    "ok",
+    ""
+   ],
+   "stdbit|u128": [
+    "ok",
+    ""
+   ],
+   "to_chars|i128": [
+    "ok",
+    ""
+   ],
+   "to_chars|u128": [
+    "ok",
+    ""
+   ],
+   "to_integer|i128": [
+    "rejected",
+    "no matching function for call to 'to_integer<T>(std::byte)'"
+   ],
+   "to_integer|u128": [
+    "rejected",
+    "no matching function for call to 'to_integer<T>(std::byte)'"
+   ],
+   "to_string|i128": [
+    "rejected",
+    "call of overloaded 'to_string(T)' is ambiguous"
+   ],
+   "to_string|u128": [
+    "rejected",
+    "call of overloaded 'to_string(T)' is ambiguous"
+   ]
+  },
+  "libstdc++/gcc|gnu++26": {
+   "abs|i128": [
+    "ok",
+    ""
+   ],
+   "add_sat|i128": [
+    "rejected",
+    "'add_sat' is not a member of 'std'"
+   ],
+   "add_sat|u128": [
+    "rejected",
+    "'add_sat' is not a member of 'std'"
+   ],
+   "atomic|i128": [
+    "rejected",
+    "'struct std::atomic<__int128>' has no member named 'fetch_add'"
+   ],
+   "atomic|u128": [
+    "rejected",
+    "'struct std::atomic<__int128 unsigned>' has no member named 'fetch_add'"
+   ],
+   "bit|u128": [
+    "ok",
+    ""
+   ],
+   "byteswap|i128": [
+    "ok",
+    ""
+   ],
+   "byteswap|u128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|i128": [
+    "ok",
+    ""
+   ],
+   "ckd_add|u128": [
+    "ok",
+    ""
+   ],
+   "cmath|i128": [
+    "ok",
+    ""
+   ],
+   "cmath|u128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|i128": [
+    "ok",
+    ""
+   ],
+   "cmp_less|u128": [
+    "ok",
+    ""
+   ],
+   "duration|i128": [
+    "ok",
+    ""
+   ],
+   "duration|u128": [
+    "ok",
+    ""
+   ],
+   "extents|i128": [
+    "ok",
+    ""
+   ],
+   "extents|u128": [
+    "ok",
+    ""
+   ],
+   "format|i128": [
+    "ok",
+    ""
+   ],
+   "format|u128": [
+    "ok",
+    ""
+   ],
+   "from_chars|i128": [
+    "ok",
+    ""
+   ],
+   "from_chars|u128": [
+    "ok",
+    ""
+   ],
+   "gcd|i128": [
+    "ok",
+    ""
+   ],
+   "gcd|u128": [
+    "ok",
+    ""
+   ],
+   "hash|i128": [
+    "ok",
+    ""
+   ],
+   "hash|u128": [
+    "ok",
+    ""
+   ],
+   "in_range|i128": [
+    "ok",
+    ""
+   ],
+   "in_range|u128": [
+    "ok",
+    ""
+   ],
+   "integral|i128": [
+    "yes",
+    ""
+   ],
+   "integral|u128": [
+    "yes",
+    ""
+   ],
+   "iota|i128": [
+    "ok",
+    ""
+   ],
+   "iota|u128": [
+    "ok",
+    ""
+   ],
+   "is_integral|i128": [
+    "yes",
+    ""
+   ],
+   "is_integral|u128": [
+    "yes",
+    ""
+   ],
+   "is_signed|i128": [
+    "yes",
+    ""
+   ],
+   "is_signed|u128": [
+    "no",
+    ""
+   ],
+   "istream|i128": [
+    "rejected",
+    "no match for 'operator>>' (operand types are 'std::istringstream' {aka 'std::__cxx11::basic_istringstream<char>'} and 'T' {aka '__int128'})"
+   ],
+   "istream|u128": [
+    "rejected",
+    "no match for 'operator>>' (operand types are 'std::istringstream' {aka 'std::__cxx11::basic_istringstream<char>'} and 'T' {aka '__int128 unsigned'})"
+   ],
+   "limits_digits|i128": [
+    "yes",
+    ""
+   ],
+   "limits_digits|u128": [
+    "yes",
+    ""
+   ],
+   "limits|i128": [
+    "yes",
+    ""
+   ],
+   "limits|u128": [
+    "yes",
+    ""
+   ],
+   "make_unsigned|i128": [
+    "ok",
+    ""
+   ],
+   "make_unsigned|u128": [
+    "ok",
+    ""
+   ],
+   "midpoint|i128": [
+    "ok",
+    ""
+   ],
+   "midpoint|u128": [
+    "ok",
+    ""
+   ],
+   "ostream|i128": [
+    "rejected",
+    "ambiguous overload for 'operator<<' (operand types are 'std::ostringstream' {aka 'std::__cxx11::basic_ostringstream<char>'} and 'T' {aka '__int128'})"
+   ],
+   "ostream|u128": [
+    "rejected",
+    "ambiguous overload for 'operator<<' (operand types are 'std::ostringstream' {aka 'std::__cxx11::basic_ostringstream<char>'} and 'T' {aka '__int128 unsigned'})"
+   ],
+   "random|i128": [
+    "ok",
+    ""
+   ],
+   "random|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_add|u128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|i128": [
+    "ok",
+    ""
+   ],
+   "saturating_cast|u128": [
+    "ok",
+    ""
+   ],
+   "stdbit|u128": [
+    "ok",
+    ""
+   ],
+   "to_chars|i128": [
+    "ok",
+    ""
+   ],
+   "to_chars|u128": [
+    "ok",
+    ""
+   ],
+   "to_integer|i128": [
+    "ok",
+    ""
+   ],
+   "to_integer|u128": [
+    "ok",
+    ""
+   ],
+   "to_string|i128": [
+    "rejected",
+    "call of overloaded 'to_string(T)' is ambiguous"
+   ],
+   "to_string|u128": [
+    "rejected",
+    "call of overloaded 'to_string(T)' is ambiguous"
+   ]
+  }
+ }
+}
