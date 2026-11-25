@@ -1,0 +1,2 @@
+# Landing page is built in CI by `make index`.
+/generated/index.html
